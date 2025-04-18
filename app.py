@@ -19,7 +19,7 @@ st.markdown("""
 # Sidebar
 st.sidebar.header("Comparación de Telemetría")
 
-year = st.sidebar.selectbox("Select Year", [2025, 2024, 2023, 2022, 2021])
+year = st.sidebar.selectbox("Año", [2025, 2024, 2023, 2022, 2021])
 event_schedule = fastf1.get_event_schedule(year)
 event_names = event_schedule.loc[event_schedule['EventFormat'] != 'Testing', 'EventName'].tolist()
 
